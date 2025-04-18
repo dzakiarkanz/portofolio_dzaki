@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzaki Arkan Zaidan | Portfolio</title>
+    <meta name="description" content="Professional Portfolio of Dzaki Arkan Zaidan">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Default Styles for Larger Screens */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-buttons a {
+            padding: 10px 20px;
+            font-size: 1rem;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+
+        .about-image img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Icon Colors */
+        .contact-card i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-card i.fa-envelope {
+            color: #1f6feb; /* Blue for email */
+        }
+
+        .contact-card i.fa-whatsapp {
+            color: #25d366; /* Green for WhatsApp */
+        }
+
+        .contact-card i.fa-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Responsive Styles for Screens Below 768px */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .contact-card {
+                width: 100%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-card i {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Responsive Styles for Screens Below 480px */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-description {
+                font-size: 0.9rem;
+            }
+
+            .hero-buttons a {
+                font-size: 0.8rem;
+                padding: 10px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .footer-content {
+                font-size: 0.9rem;
+            }
+
+            .contact-card i {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <div class="floating-nav">
+        <ul>
+            <li><a href="#home" data-tooltip="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="#skills" data-tooltip="Skills"><i class="fas fa-code"></i></a></li>
+            <li><a href="#projects" data-tooltip="Projects"><i class="fas fa-project-diagram"></i></a></li>
+            <li><a href="#about" data-tooltip="About"><i class="fas fa-user"></i></a></li>
+            <li><a href="#contact" data-tooltip="Contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- Floating Email Icon -->
+    <a href="mailto:contact@dzakiarkan.com" class="floating-email" aria-label="Send Email">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    <!-- Main Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">D</span>
+                <span class="logo-text">Dzaki Arkan Zaidan</span>
+            </a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting" style="font-size: 2.5rem;">Hi, I'm</span>
+                    <span class="name" style="font-size: 3rem;">Dzaki</span>
+                    <br>
+                    <span class="subtitle" style="font-size: 2rem;">I'm a Student Of Technology Information</span><br>
+                    <span class="subtitle" style="font-size: 1.5rem;">( Mercu Buana University )</span>
+                </h1>
+                <p class="hero-description">
+                    I am a university student with a deep passion for technology, especially Artificial Intelligence. I am also interested in the world of business. This is my personal website, which I created to showcase my journey and aspirations in these fields.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+                <div class="divider"></div>
+            </div>
+            <div class="skills-grid" id="skillsContainer">
+                <div class="skills-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                    <span>95%</span>
+                </div>
+                <div class="skills-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                    <span>90%</span>
+                </div>
+                <div class="skills-item">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                    <span>85%</span>
+                </div>
+                <div class="skills-item">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                    <span>80%</span>
+                </div>
+                <div class="skills-item">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                    <span>75%</span>
+                </div>
+                <div class="skills-item">
+                    <i class="fas fa-database"></i>
+                    <span>MongoDB</span>
+                    <span>70%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">My recent work</p>
+                <div class="divider"></div>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid" id="projectsContainer">
+                <!-- Projects will be dynamically added here -->
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2 class="section-title">About Me</h2>
+                        <p class="section-subtitle">Get to know me</p>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="bio">
+                        <p style="margin-bottom: 20px;">I am Dzaki Arkan Zaidan, a technology enthusiast currently pursuing my studies at Mercu Buana University. With a deep passion for Artificial Intelligence (AI), I continuously explore the synergy between technology and creativity to develop innovative and intelligent digital solutions. Beyond academics, I am also an entrepreneur, actively growing my brand, Vers Ciel, as a manifestation of my vision and creativity in the business world.</p>
+                        <p style="margin-bottom: 20px;">I create seamless digital experiences where technology meets design. With a passion for innovation, I craft modern, responsive websites and web applications that are not just functional but also captivating. For me, technology is more than just code—it’s a bridge to meaningful experiences and limitless possibilities.</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="image/Dzaki.jpeg" alt="About Dzaki" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>dzakiarkanzaidan01@gmail.com</p>
+                        <a href="mailto:contact@dzakiarkan.com">Send Message</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h4>WhatsApp</h4>
+                        <p>+62 895 6107 46556</p>
+                        <a href="tel:+621234567890">Call Me</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-instagram"></i>
+                        <h4>Instagram</h4>
+                        <p>@dzakiarkanz_</p>
+                        <a href="#">View Instagram</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Beginning -->
+    <p class="back-to-beginning" style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="link" style="text-decoration: none; display: inline-flex; align-items: center; background-color: #1f6feb; padding: 10px 20px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+            <i class="fas fa-arrow-left" style="color: white; margin-right: 0.5rem;"></i>
+            <span style="font-size: 1.2rem; font-weight: 600; color: white;">Back to the beginning</span>
+        </a>
+    </p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-title">Dzaki Arkan</h3>
+                    <p class="footer-about">A passionate web developer and designer creating digital experiences that matter.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <p>Subscribe to get updates on my latest projects.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dzaki Arkan Zaidan. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/scrollEffects.js"></script>
+</body>
+</html>
