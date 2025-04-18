@@ -79,35 +79,61 @@
         }
 
         .contact-card {
-            width: 30%;
+            background-color: #ffffff; /* Putih untuk latar belakang */
+            border-radius: 10px; /* Membuat sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+            padding: 20px;
+            margin: 10px auto; /* Memberikan jarak antar kartu */
             text-align: center;
-            margin-bottom: 20px;
+            max-width: 90%; /* Membatasi lebar kartu agar tidak terlalu besar */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
+        .contact-card:hover {
+            transform: translateY(-5px); /* Efek hover untuk mengangkat kartu */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar saat hover */
         }
 
-        /* Icon Colors */
         .contact-card i {
             font-size: 2rem;
             margin-bottom: 10px;
         }
 
         .contact-card i.fa-envelope {
-            color: #1f6feb; /* Blue for email */
+            color: #1f6feb; /* Warna biru untuk email */
         }
 
         .contact-card i.fa-whatsapp {
-            color: #25d366; /* Green for WhatsApp */
+            color: #25d366; /* Warna hijau untuk WhatsApp */
         }
 
         .contact-card i.fa-instagram {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .contact-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .contact-card p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .contact-card a {
+            font-size: 0.9rem;
+            color: #1f6feb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
         }
 
         /* Responsive Styles for Screens Below 768px */
@@ -152,7 +178,24 @@
             }
 
             .contact-card {
-                width: 100%;
+                max-width: 100%; /* Memastikan kartu memenuhi lebar layar kecil */
+                padding: 15px;
+            }
+
+            .contact-card i {
+                font-size: 1.8rem;
+            }
+
+            .contact-card h4 {
+                font-size: 1.1rem;
+            }
+
+            .contact-card p {
+                font-size: 0.95rem;
+            }
+
+            .contact-card a {
+                font-size: 0.85rem;
             }
 
             .footer-content {
@@ -192,6 +235,26 @@
 
             .footer-content {
                 font-size: 0.9rem;
+            }
+
+            .contact-card {
+                padding: 10px;
+            }
+
+            .contact-card i {
+                font-size: 1.5rem;
+            }
+
+            .contact-card h4 {
+                font-size: 1rem;
+            }
+
+            .contact-card p {
+                font-size: 0.9rem;
+            }
+
+            .contact-card a {
+                font-size: 0.8rem;
             }
 
             .contact-card i {
