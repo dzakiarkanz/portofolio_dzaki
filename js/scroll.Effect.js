@@ -33,6 +33,16 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Scroll to Top Button
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
 // Smooth Scrolling for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
