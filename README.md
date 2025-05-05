@@ -1,2 +1,2 @@
-# portofolio_dzaki_remake
+# portofolio_dzaki
 Versi Remake dari yang pertama
